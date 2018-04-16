@@ -6,9 +6,10 @@
 <html>
 	<head>
 		<title>Dog Bread Classifier</title>
-		<script type="text/javascript" src="script/jquery.min.js"></script>
+		<?php require('require.php'); ?>
 	</head>
 	<body>
+		<?php require('navbar.php'); ?>
 		<p>This is a sample body</p>
 		<div>
 			<input name="imageFle" type="file" placeholder="Upload an image">
