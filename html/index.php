@@ -11,16 +11,34 @@
 	<body>
 		<?php require('navbar.php'); ?>
 		<p>This is a sample body</p>
-		<div>
-			<input name="imageFle" type="file" placeholder="Upload an image">
-			<button id="predictButton" type="button">Predict</button>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-5 offset-md-1" style="border: 1px solid #e7e7e7; height: 300px">
+					<div>
+						<input name="imageFle" type="file" placeholder="Upload an image">
+						<button id="predictButton" type="button">Predict</button>
+					</div>
+				</div>
+				
+				<div class="col-md-5" style="border: 1px solid #e7e7e7; height: 300px">
+					<!--<div id="output"></div> -->
+					<div id="p1"></div>
+					<div id="p2"></div>
+					<div id="p3"></div>
+					<div id="p4"></div>
+					<div id="p5"></div>
+					<p><center>For predictions</center></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 offset-md-1" style="border: 1px solid #e7e7e7; height: 100px">
+					<p><center>For description</center></p>
+				</div>
+			</div>
 		</div>
-		<!--<div id="output"></div> -->
-		<div id="p1"></div>
-		<div id="p2"></div>
-		<div id="p3"></div>
-		<div id="p4"></div>
-		<div id="p5"></div>
+		
 
 	</body>
 	<!-- Scripts -->
