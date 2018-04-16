@@ -14,7 +14,7 @@
 		$result = $SP_db->query($query)->fetch_assoc();
 		$data[] = $result;
 	}
-
+/*
 	echo "<table border = '1'>";
 	foreach($data as $d){
 		echo"<tr>";
@@ -24,4 +24,6 @@
 		echo "</tr>";
 	}
 	echo "</table>";
+*/
+	echo json_encode($data);
 ?>

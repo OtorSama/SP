@@ -15,7 +15,12 @@
 			<input name="imageFle" type="file" placeholder="Upload an image">
 			<button id="predictButton" type="button">Predict</button>
 		</div>
-		<div id="output"></div>
+		<!--<div id="output"></div> -->
+		<div id="p1"></div>
+		<div id="p2"></div>
+		<div id="p3"></div>
+		<div id="p4"></div>
+		<div id="p5"></div>
 
 	</body>
 	<!-- Scripts -->
@@ -30,9 +35,14 @@
 			$.ajax({
 				url: "html/prediction.php?image_file="+image_file,
 				type: "get",
-				dataType: "html",
+				dataType: "JSON",
 				success: function( returnData ){
-					$("#output").html(returnData);
+					//$("#output").html(returnData);
+					$("#p1").html(returnData[0]["breed_name"]);
+					$("#p2").html(returnData[1]["breed_name"]);
+					$("#p3").html(returnData[2]["breed_name"]);
+					$("#p4").html(returnData[3]["breed_name"]);
+					$("#p5").html(returnData[4]["breed_name"]);
 				}
 			});
 		}
