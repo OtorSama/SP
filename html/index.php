@@ -38,7 +38,6 @@
 				</div>
 			</div>
 		</div>
-		
 
 	</body>
 	<!-- Scripts -->
@@ -51,7 +50,7 @@
 		function doPrediction(){
 			var image_file = "dogImage.jpg";
 			$.ajax({
-				url: "html/prediction.php?image_file="+image_file,
+				url: "prediction.php?image_file="+image_file,
 				type: "get",
 				dataType: "JSON",
 				success: function( returnData ){

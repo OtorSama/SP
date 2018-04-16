@@ -4,7 +4,7 @@
 	$image_file = $_GET['image_file'];
 	$content = exec("python ../bin/predictBreed.py ".$image_file);
 	$predictions = explode(" ",$content);
-
+	
 	$data = [];
 
 	foreach($predictions as $pred){
