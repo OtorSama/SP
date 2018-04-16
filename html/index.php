@@ -14,14 +14,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-1"></div>
-				<div class="col-md-5 offset-md-1" style="border: 1px solid #e7e7e7; height: 300px">
+				<div class="col-md-4 offset-md-1" style="border: 1px solid #e7e7e7; height: 300px">
 					<div>
 						<input name="imageFle" type="file" placeholder="Upload an image">
 						<button id="predictButton" type="button">Predict</button>
 					</div>
 				</div>
 				
-				<div class="col-md-5" style="border: 1px solid #e7e7e7; height: 300px">
+				<div class="col-md-6" style="border: 1px solid #e7e7e7; height: 300px">
 					<!--<div id="output"></div> -->
 					<div id="p1"></div>
 					<div id="p2"></div>
