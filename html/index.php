@@ -12,7 +12,11 @@
 		<?php require('navbar.php'); ?>
 		<p>This is a sample body</p>
 		<div>
-			<input name="imageFle" type="file" placeholder="Upload an image">
+			<form action="upload.php" method="post" enctype="multipart/form-data">
+				Select image to predict.
+				<input name="imageFile" type="file" id="imageFile">
+				<input type="submit" value="Upload Image" name="submit">
+			</form>
 			<button id="predictButton" type="button">Predict</button>
 		</div>
 		<!--<div id="output"></div> -->
@@ -33,7 +37,7 @@
 		function doPrediction(){
 			var image_file = "dogImage.jpg";
 			$.ajax({
-				url: "html/prediction.php?image_file="+image_file,
+				url: "prediction.php?image_file="+image_file,
 				type: "get",
 				dataType: "JSON",
 				success: function( returnData ){
