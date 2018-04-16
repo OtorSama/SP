@@ -10,13 +10,13 @@
 	</head>
 	<body>
 		<?php require('navbar.php'); ?>
-		<p>This is a sample body</p>
-		<div class="container">
+
+		<div class="container" style="padding: 2%">
 			<div class="row">
 				<div class="col-md-1"></div>
-				<div class="col-md-4 offset-md-1" style="border: 1px solid #e7e7e7; height: 300px">
-					<div>
-						<input name="imageFle" type="file" placeholder="Upload an image">
+				<div class="col-md-4" style="border: 1px solid #e7e7e7; height: 300px;">
+					<div class="container-fluid">
+						<input name="imageFile" type="file" placeholder="Upload an image">
 						<button id="predictButton" type="button">Predict</button>
 					</div>
 				</div>
@@ -33,7 +33,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-1"></div>
-				<div class="col-md-10 offset-md-1" style="border: 1px solid #e7e7e7; height: 100px">
+				<div class="col-md-10" style="border: 1px solid #e7e7e7; height: 150px">
 					<p><center>For description</center></p>
 				</div>
 			</div>
