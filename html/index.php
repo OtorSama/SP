@@ -6,22 +6,36 @@
 <html>
 	<head>
 		<title>Dog Bread Classifier</title>
-		<?php require("require.php"); ?>
-		<script>
-			$(document).ready(function() {
-		            $(".dropdown-toggle").dropdown();
-		        });
-		</script>
+		<script type="text/javascript" src="script/jquery.min.js"></script>
 	</head>
 	<body>
-		<?php require("navbar.php"); ?>
 		<p>This is a sample body</p>
-		<?php 
-			$var1 = exec("python testpython.py hello.jpeg");
-			echo $var1;
+		<div>
+			<input name="imageFle" type="file" placeholder="Upload an image">
+			<button id="predictButton" type="button">Predict</button>
+		</div>
+		<div id="output"></div>
 
-			$var2 = exec("python testpython.py world.jpeg");
-			echo $var2;
-		?>
 	</body>
+	<!-- Scripts -->
+	<script>
+		$(document).ready(function() {
+
+			$(document).on("click","#predictButton", doPrediction);
+		});
+
+		function doPrediction(){
+			var image_file = "dogImage.jpg";
+			$.ajax({
+				url: "html/prediction.php?image_file="+image_file,
+				type: "get",
+				dataType: "html",
+				success: function( returnData ){
+					$("#output").html(returnData);
+				}
+			});
+		}
+
+	</script>
+	 
 </html>
