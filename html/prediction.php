@@ -1,8 +1,8 @@
 <?php
 	require("config.php");
 
-	//$image_file = $_GET['image_file'];
-	$content = exec("python ../bin/predictBreed.py");
+	$image_file = $_GET['image_file'];
+	$content = exec("python ../bin/predictBreed.py ".$image_file);
 	$predictions = explode(" ",$content);
 
 	$data = [];
@@ -15,10 +15,13 @@
 		$data[] = $result;
 	}
 
+	echo "<table border = '1'>";
 	foreach($data as $d){
+		echo"<tr>";
 		foreach($d as $cell){
-			echo $cell." | " ;
+			echo "<td>".$cell."</td>" ;
 		}
-		echo "<br/>";
+		echo "</tr>";
 	}
+	echo "</table>";
 ?>
