@@ -17,7 +17,7 @@
 
 		<?php require('navbar.php'); ?>
 			
-		<div class="container">
+		<div class="container" style="padding: 2%">
 			<div class="row">
 				<div class="col-md-1"></div>
 				<div class="col-md-4 offset-md-1" style="border: 1px solid #e7e7e7; height: 300px">
@@ -43,7 +43,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-1"></div>
-				<div class="col-md-10 offset-md-1" style="border: 1px solid #e7e7e7; height: 100px">
+				<div class="col-md-10" style="border: 1px solid #e7e7e7; height: 150px">
 					<p><center>For description</center></p>
 					<div name="breedname"></div>
 					<div name="description"></div>
