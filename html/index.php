@@ -12,15 +12,16 @@
 				background-color: blue;
 			}
 		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 
 		<?php require('navbar.php'); ?>
 			
-		<div class="container" style="padding: 2%">
+		<div  id="mCont" class="container-fluid" style="">
 			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-4 offset-md-1" style="border: 1px solid #e7e7e7; height: 300px">
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+				<div id="imagePanel" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 					<div>
 						<form action="upload.php" method="post" enctype="multipart/form-data">
 							<input name="imageFile" type="file" id="imageFile">
@@ -30,8 +31,7 @@
 					</div>
 				</div>
 				
-				<div class="col-md-6" style="border: 1px solid #e7e7e7; height: 300px">
-			
+				<div id="predPanel" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<p><center>For predictions</center></p>
 
 					<div id="p1" class="predicted"></div>
@@ -40,14 +40,16 @@
 					<div id="p4" class="predicted"></div>
 					<div id="p5" class="predicted"></div>
 				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 			</div>
 			<div class="row">
-				<div class="col-md-1"></div>
-				<div class="col-md-10" style="border: 1px solid #e7e7e7; height: 150px">
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+				<div id="descPanel" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
 					<p><center>For description</center></p>
 					<div name="breedname"></div>
 					<div name="description"></div>
 				</div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 			</div>
 		</div>
 
