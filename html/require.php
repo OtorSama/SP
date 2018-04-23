@@ -4,6 +4,7 @@
 <script type="text/javascript" src="../bootstrap/js/jquery.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="../Croppie-master/croppie.min.js"></script>
+<script type="text/javascript" src="../script/script.js"></script>
 <script>
     $(document).ready(function () {
         $('.dropdown-toggle').dropdown();

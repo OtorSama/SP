@@ -17,6 +17,13 @@
 	<body>
 
 		<?php require('navbar.php'); ?>
+		<?php
+			if(isset($_POST['imgName'])){
+				$imgName = $_POST['imgName'];
+			}
+			else
+				$imgName = "../images/temp/placeholder.png";
+			?>
 			
 		<div  id="mCont" class="container-fluid" style="">
 			<div class="row">
@@ -31,56 +38,16 @@
 						<button id="predictButton" type="button">Predict</button>
 					</div>
 					-->
-					<div id="croppie-sample" style="border: 0.1px solid red; padding: 10%">
-						<style>
-							#upload-actions  input[type="file"]{
-								position: absolute;
-								display: none;
-								border: 1px solid blue;
-							}
-						</style>
-
-						<script>
-							function browseImg(){
-								var inputElement = document.getElementById("imgFile");
-								inputElement.click();
-
-								inputElement.onchange = function(){
-									var file = inputElement.files[0];
-									filepath = inputElement.value.split("\\");
-									filename = filepath[filepath.length-1];
-
-									alert(filename);
-								}							
-							}
-						</script>
-
+					<div id="imgHolder" style="display: block;overflow: hidden;">
+						<img id="img" name="img" src="<?php echo $imgName ?>" onclick="browseImg()" />
+					</div>
+					<div id="croppie-sample">
 						<div id="upload-actions">
-							<!--<a class="btn file-btn btn-default">
-								<span>Upload Image</span>
-								<input hidden type="file" value="Choose a file" accept="image/*" />
-
-
-							</a>-->
-							<button type="button" class="btn btn-default" onclick="browseImg();">Choose Image</button>
-							<input type="file" id="imgFile" name="imgFile" accept="image/*" />
-							
+							<form id="imgForm" method="post" action="tmpUpload.php" enctype="multipart/form-data">
+								<!-- <button type="button" class="btn btn-default" onclick="browseImg();">Choose Image</button> -->
+								<input type="file" id="imgFile" name="imgFile" accept="image/*"/>
+							</form>
 						</div>
-						
-						<script>
-							$uploadImg = $('imagePanel').croppie({
-								enableExif: true,
-								viewport: {
-									width: 200,
-									height: 200,
-									type: 'circle'
-								},
-								boundary: {
-									width: 300,
-									height: 300
-								}
-							});
-						</script>
 					</div>
 				</div>
 				
