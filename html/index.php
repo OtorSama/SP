@@ -38,7 +38,7 @@
 						<button id="predictButton" type="button">Predict</button>
 					</div>
 					-->
-					<div id="imgHolder" style="display: block;overflow: hidden;">
+					<div id="imgHolder" style="display: block; overflow: hidden;">
 						<img id="img" name="img" src="<?php echo $imgName ?>" onclick="browseImg()" />
 					</div>
 					<div id="croppie-sample">
