@@ -1,11 +1,13 @@
-#imagePanel, #predPanel
-	{
+#imagePanel, #predPanel{
 		border: 1px solid #e7e7e7;
-		height: 65vh;
+		height: 67.5vh;
 	}
 
-#descPanel
-	{
+#imagePanel{
+	padding-top: 0.5%;
+}
+
+#descPanel{
 		border: 1px solid #e7e7e7;
 		height: 20vh;
 	}
