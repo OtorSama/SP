@@ -7,12 +7,19 @@
 	<head>
 		<title>Dog Bread Classifier</title>
 		<?php require('require.php'); ?>
+
+		<!-- remove this style later -->
 		<style>
 			.predicted:hover {
 				color: white;
 				background-color: gray;
 				cursor: help;
 			}
+			img {
+				height: 15%;
+				width: 15%;
+			}
+
 		</style>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
@@ -53,7 +60,9 @@
 						</div>
 					</div>
 				</div>
-				
+
+				<button id="predictButton" type="button">Predict</button>
+
 				<div id="predPanel" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<!-- <p><center>For predictions</center></p> -->
 					<div id="p1" class="predicted"></div>
@@ -89,18 +98,28 @@
 		});
 
 		function doPrediction(){
+			console.log("test");
 			var image_file = "dogImage.jpg";
 			$.ajax({
 				url: "prediction.php?image_file="+image_file,
 				type: "get",
 				dataType: "JSON",
 				success: function( returnData ){
-					//$("#output").html(returnData);
-					$("#p1").html(returnData[0]["breed_name"]);
+					/*
+					$("#p1").html("<img src='../images/dog_breeds/" + returnData[0]["breed_image"] + "'>" + returnData[0]["breed_name"]);
 					$("#p2").html(returnData[1]["breed_name"]);
 					$("#p3").html(returnData[2]["breed_name"]);
 					$("#p4").html(returnData[3]["breed_name"]);
 					$("#p5").html(returnData[4]["breed_name"]);
+					*/
+					var imagePath = "../images/dog_breeds/";
+
+					for(var i = 0; i < 5; i++) {
+						var image = imagePath + returnData[i]["breed_image"];
+						var name = returnData[i]["breed_name"];
+						console.log(image);
+						$("#p"+i+"").html("<image src='"+image+ "'>" + name);
+					}
 
 					$("#p1").attr("data-id", ""+returnData[0]["breed_id"]);
 					$("#p2").attr("data-id", ""+returnData[1]["breed_id"]);
