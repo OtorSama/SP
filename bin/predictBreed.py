@@ -12,4 +12,4 @@ show = ""
 for pred in predictions:
 	show += str(pred)+" "
 
-print show
+print(show)

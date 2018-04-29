@@ -9,7 +9,9 @@
 		<?php require('require.php'); ?>
 		<style>
 			.predicted:hover {
-				background-color: blue;
+				color: white;
+				background-color: gray;
+				cursor: help;
 			}
 		</style>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,26 +49,30 @@
 								<!-- <button type="button" class="btn btn-default" onclick="browseImg();">Choose Image</button> -->
 								<input type="file" id="imgFile" name="imgFile" accept="image/*"/>
 							</form>
+							
 						</div>
 					</div>
 				</div>
 				
 				<div id="predPanel" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<p><center>For predictions</center></p>
-
+					<!-- <p><center>For predictions</center></p> -->
 					<div id="p1" class="predicted"></div>
 					<div id="p2" class="predicted"></div>
 					<div id="p3" class="predicted"></div>
 					<div id="p4" class="predicted"></div>
 					<div id="p5" class="predicted"></div>
+
+					<div>
+						<button id="predictButton" type="button" style="">Predict</button>
+					</div>
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 			</div>
 			<div class="row">
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 				<div id="descPanel" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-					<p><center>For description</center></p>
-					<div name="breedname"></div>
+					<!-- <p><center>For description</center></p> -->
+					<div name="breedname" style="font-weight: bold;"></div>
 					<div name="description"></div>
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
@@ -104,6 +110,9 @@
 
 					$("div[name=description]").html(returnData[0]["breed_description"]);
 					$("div[name=breedname]").html(returnData[0]["breed_name"]);
+				},
+				error: function(){
+					alert("Failed");
 				}
 			});
 		}
