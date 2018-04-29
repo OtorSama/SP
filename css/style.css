@@ -23,5 +23,21 @@
 	margin-right: auto;
 	
 	width: auto;
-	height: 60vh;
+	height: 65vh;
+}
+
+.btn{
+	font-weight: bold;
+}
+
+.btn-default{
+	color: white;
+	background-color: #BDC3C7;
+	border-color: white;
+}
+
+.btn-default:hover, .btn-default:active, .btn-default:focus{
+	color: #E68364;
+	background-color: white;
+	border-color: #E68364;
 }

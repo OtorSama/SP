@@ -48,14 +48,14 @@
 					</div>
 					-->
 					<div id="imgHolder" style="display: block; overflow: hidden;">
-						<img id="img" name="img" src="<?php echo $imgName ?>" onclick="browseImg()" />
+						<img id="img" name="img" src="<?php echo $imgName ?>" />
 					</div>
 					<div id="croppie-sample">
 						<div id="upload-actions">
-							<form id="imgForm" method="post" action="tmpUpload.php" enctype="multipart/form-data">
-								<!-- <button type="button" class="btn btn-default" onclick="browseImg();">Choose Image</button> -->
+							<form id="imgForm" method="post" action="imgUpload.php" enctype="multipart/form-data">
 								<input type="file" id="imgFile" name="imgFile" accept="image/*"/>
 							</form>
+							<!-- <input type="file" id="imgFile" name="imgFile" accept="image/*"/> -->
 							
 						</div>
 					</div>
@@ -70,10 +70,12 @@
 					<div id="p4" class="predicted"></div>
 
 					<div>
-						<button id="predictButton" type="button" style="">Predict</button>
+						<!-- <button id="predictButton" type="button" style="">Predict</button> -->
 					</div>
 				</div>
-				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+					<button id="predictButton" class="btn btn-default" type="button" style="height: 100px;">Predict</button>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>

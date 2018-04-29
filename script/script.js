@@ -1,25 +1,44 @@
-window.onload = function(){}
+// window.onload = function(){}
+$(document).ready(function() {
+	$(document).on("click", "#img", browseImg);
+	$(document).on("click","#predictButton", doPrediction);
+	$(document).on("click",".predicted",viewDescription);
+});
 
 function browseImg(){
 	var inputElement = document.getElementById("imgFile");
 	inputElement.click();
 
 	inputElement.onchange = function(){
-	var file = inputElement.files[0];
-	//filepath = inputElement.value;
-	filepath = inputElement.value.split("\\");
-	filename = filepath[filepath.length-1];
-	
-	var form = document.getElementById("imgForm");
-	form.submit();
-	}							
+		var file = inputElement.files[0];
+		var	filepath = inputElement.value.split("\\");
+		var	filename = filepath[filepath.length-1];
+
+		var fd = new FormData();
+		fd.append('imgFile', file);
+
+		$('#imgForm').submit(function(event){
+			event.preventDefault();
+
+			 $.ajax({
+				url: "imgUpload.php",
+				type: "POST",
+				processData: false,
+				contentType: false,
+				data: fd,
+				dataType: "text",
+				success: function(data) {
+					// alert(data);
+					path = ("" + data);
+					$('#img').attr('src', path);
+					fd = new FormData();
+				}
+			});
+		});
+		
+		$('#imgForm').submit();
+	}		
 }
-
-$(document).ready(function() {
-
-	$(document).on("click","#predictButton", doPrediction);
-	$(document).on("click",".predicted",viewDescription);
-});
 
 function doPrediction(){
 	console.log("test");
