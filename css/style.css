@@ -1,6 +1,6 @@
 #imagePanel, #predPanel{
 		border: 1px solid #e7e7e7;
-		height: 67.5vh;
+		height: 67.5vh;/*67.5vh;*/
 	}
 
 #imagePanel{
@@ -23,5 +23,5 @@
 	margin-right: auto;
 	
 	width: auto;
-	height: 65vh;
+	height: 60vh;
 }

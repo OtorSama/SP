@@ -10,9 +10,9 @@
 	foreach($predictions as $pred){
 		$query = "SELECT * FROM dog_breeds
 				WHERE breed_id = {$pred}";
-		
-		$result = $SP_db->query($query)->fetch_assoc();
-		$data[] = $result;
+
+		$result = $SP_db->query($query);
+		$data[] = $result->fetch_assoc();
 	}
 /*
 	echo "<table border = '1'>";
