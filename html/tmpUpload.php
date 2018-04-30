@@ -22,4 +22,4 @@
 			form.submit();
 		</script>
 </body>
-</html
+</html>
