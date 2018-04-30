@@ -1,8 +1,10 @@
 <?php
 	require("config.php");
 
-	$image_file = $_GET['image_file'];
-	$content = exec("python ../bin/predictBreed.py ".$image_file);
+/*	$image_file = $_GET['image_file'];
+	$content = exec("python ../bin/predictBreed.py ".$image_file); */
+	$content = exec("cd ../../../../../home/user/Downloads/code/sp/; python deployPredict.py chihuahua.jpg"); 
+       	echo $content;
 	$predictions = explode(" ",$content);
 	
 	$data = [];
