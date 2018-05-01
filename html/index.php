@@ -11,13 +11,30 @@
 		<!-- remove this style later -->
 		<style>
 			.predicted:hover {
+				transition: 0.3s;
 				color: white;
-				background-color: gray;
+				background-color: #FFCCBC;
 				cursor: help;
 			}
-			img {
-				height: 10%;
-				width: 10%;
+
+			.predActive{
+				/*background-color: #FF8C7C;*/
+				background-color: #FF8C7C;
+			}
+
+			.predActive #predName{
+				color: white;
+				font-weight: bold;
+			}
+			
+			#predPanel{
+				/*display: block;*/
+				/*padding: 0.5%;*/
+			}
+
+			#p0 > img, #p1 > img, #p2 > img, #p3 > img, #p4 > img {
+				height: 5.8vw;
+				width: 5.8vw;
 			}
 
 		</style>
@@ -36,7 +53,7 @@
 			
 		<div  id="mCont" class="container-fluid" style="">
 			<div class="row">
-				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
 				<div id="imagePanel" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 					<!--
 					<div>
@@ -56,19 +73,19 @@
 								<input type="file" id="imgFile" name="imgFile" accept="image/*"/>
 							</form>
 							<!-- <input type="file" id="imgFile" name="imgFile" accept="image/*"/> -->
-							
 						</div>
 					</div>
 				</div>
 
-				<div id="predPanel" class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<!-- <p><center>For predictions</center></p> -->
-					<div id="p0" class="predicted"></div>
-					<div id="p1" class="predicted"></div>
-					<div id="p2" class="predicted"></div>
-					<div id="p3" class="predicted"></div>
-					<div id="p4" class="predicted"></div>
-
+				<div id="predPanel" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+					<div id="predCont">
+						<!-- <p><center>For predictions</center></p> -->
+						<div id="p0" class="predicted predActive"></div>
+						<div id="p1" class="predicted"></div>
+						<div id="p2" class="predicted"></div>
+						<div id="p3" class="predicted"></div>
+						<div id="p4" class="predicted"></div>
+					</div>
 					<div>
 						<!-- <button id="predictButton" type="button" style="">Predict</button> -->
 					</div>
@@ -78,13 +95,14 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
-				<div id="descPanel" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+				<div id="descPanel" class="col-xs-8 col-sm-8 col-md-8 col-lg-8" style="overflow-y: auto;">
 					<!-- <p><center>For description</center></p> -->
-					<div name="breedname" style="font-weight: bold;"></div>
-					<div name="description"></div>
+					<!-- <div name="breedname" style="font-weight: bold;"></div> -->
+					<!-- <div name="description" style="text-align: justify;"></div> -->
+					<span id="description" name="description"></span>
 				</div>
-				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
 			</div>
 		</div>
 	</body>
