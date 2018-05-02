@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$(document).on("click", "#img", browseImg);
 	$(document).on("click","#predictButton", doPrediction);
 	$(document).on("click",".predicted",viewDescription);
-	$(document).on("click", ".predicted", selectBreed)
+	$(document).on("click", ".predicted", selectBreed);
 });
 
 function browseImg(){
@@ -50,6 +50,18 @@ function browseImg(){
 function selectBreed(){
 	$(".predActive").removeClass("predActive");
 	$(this).toggleClass("prediction predActive");
+}
+
+function adjustWidth(){
+	var bodyWidth = $('body').width();
+	// var bodyWidth = $(window).width();
+	oneVW = (0.003)*(bodyWidth);
+	
+	var tmp = $("#descPanel").width();
+	// alert(tmp);
+	tmp = tmp + oneVW;
+	alert(tmp);
+	$("#descPanel").width(tmp);
 }
 
 function doPrediction(){

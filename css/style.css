@@ -1,17 +1,29 @@
-#imagePanel, #predPanel{
-		border: 1px solid #e7e7e7;
-		/*height: 67.5vh;/*67.5vh;*/
-		/*width: 30vw;*/
-		height: 30vw;
-	}
-
 #imagePanel{
-	/*padding-top: 0.5%;*/
+	/*border: 1px solid #e7e7e7;*/
+	border: 1px solid #815C4D;
+	height: 30vw;
+	margin-right: 0.15vw;
+
+	/*border: 1px solid red;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#predPanel{
+	/*border: 1px solid #e7e7e7;*/
+	border: 1px solid #815C4D;
+	height: 30vw;
 }
 
 #descPanel{
-		border: 1px solid #e7e7e7;
-		height: 20vh;
+	/*display: none;*/
+
+	margin-top: -1vw;
+	/*border: 1px solid #e7e7e7;*/
+	border: 1px solid #815C4D;
+	height: 18vh;
+	margin-left: 0.075vw;
 	}
 
 #upload-actions  input[type="file"]{
@@ -25,8 +37,7 @@
 	margin-right: auto;
 	
 	width: auto;
-	/*height: 65vh;*/
-	height: 30vw;
+	height: 29.5vw;
 }
 
 .btn{
@@ -43,8 +54,10 @@
 .btn-default:hover{
 	transition: 0.2s;
 	color: white;
-	background-color:#8C9AA9;
-	border-color: #8C9AA9;
+	/*background-color:#8C9AA9;*/
+	background-color:#17BBB0;
+	/*border-color: #8C9AA9;*/
+	border-color: #17BBB0;
 	/*border-color: #E74C3C;*/
 }
 
@@ -78,4 +91,38 @@
 #predCont{
 	display: block;
 	margin-top: 0.4vw;
+}
+
+.predicted:hover {
+	transition: 0.3s;
+	color: white;
+	/*background-color: #FFCCBC;*/
+	background-color: #C4B1B1;
+	/*cursor: help;*/
+	cursor: pointer;
+}
+
+#img{
+	cursor: pointer;
+}
+
+.predActive{
+	/*background-color: #FF8C7C;*/
+	/*background-color: #FF8C7C;*/
+	background-color: #9A8B8B;
+}
+
+.predActive #predName{
+	color: white;
+	font-weight: bold;
+}
+			
+#predPanel{
+	/*display: block;*/
+	/*padding: 0.5%;*/
+}
+
+#p0 > img, #p1 > img, #p2 > img, #p3 > img, #p4 > img {
+	height: 5.8vw;
+	width: 5.8vw;
 }
