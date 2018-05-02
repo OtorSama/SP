@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">JJNet</a>
+			<a class="navbar-brand" href="#">Image Classifier</a>
 		</div>
 		<ul class="nav navbar-nav navbar-right">
 			<li class="dropdown">
