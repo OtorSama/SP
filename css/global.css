@@ -1,0 +1,13 @@
+body{
+	background-color: #E8E8E8;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.navbar, .panel{
+	border: transparent;
+}
+
+.navbar{
+	background-color: #FFFFFF;
+}

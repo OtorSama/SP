@@ -1,8 +1,13 @@
+#panel1{
+	margin-right: 0.3vw;
+}
+
 #imagePanel{
 	/*border: 1px solid #e7e7e7;*/
-	border: 1px solid #815C4D;
+	/*border: 1px solid #815C4D;*/
+	width: auto;
 	height: 30vw;
-	margin-right: 0.15vw;
+	/*margin-right: 0.15vw;*/
 
 	/*border: 1px solid red;*/
 	display: flex;
@@ -12,18 +17,22 @@
 
 #predPanel{
 	/*border: 1px solid #e7e7e7;*/
-	border: 1px solid #815C4D;
+	/*border: 1px solid #815C4D;*/
+	width: auto;
 	height: 30vw;
+
+	padding-top: 0;
 }
 
 #descPanel{
-	/*display: none;*/
-
-	margin-top: -1vw;
 	/*border: 1px solid #e7e7e7;*/
-	border: 1px solid #815C4D;
-	height: 18vh;
+	/*border: 1px solid #815C4D;*/
+	width: auto;
 	margin-left: 0.075vw;
+
+	margin-top: 1vw;
+	height: 15vh;
+	overflow-y: auto;
 	}
 
 #upload-actions  input[type="file"]{
@@ -37,7 +46,7 @@
 	margin-right: auto;
 	
 	width: auto;
-	height: 29.5vw;
+	height: 29vw;
 }
 
 .btn{
@@ -63,7 +72,8 @@
 
 #predName{
 	color: #6C7A89;
-	font-size: 120%;
+	/*font-size: 120%;*/
+	font-size: 1.5vw;
 	font-weight: bold;
 	text-align: left;
 	width: 80%;
@@ -71,8 +81,13 @@
 	padding-left: 5%;
 }
 
+#panel3{
+	margin-top: -1vw;
+	height: 18.4vh;
+}
+
 #descPanel{
-	/*text-align: justify;*/
+	text-align: justify;
 	align-items: center;
 	justify-content: center;
 }
@@ -93,33 +108,37 @@
 	margin-top: 0.4vw;
 }
 
+.predicted{
+}
+
 .predicted:hover {
 	transition: 0.3s;
 	color: white;
 	/*background-color: #FFCCBC;*/
-	background-color: #C4B1B1;
-	/*cursor: help;*/
+	/*background-color: #C4B1B1;*/
+	background-color: #C5D3E2;
 	cursor: pointer;
+	margin-left: -1vw;
+	border-right: 2vw solid #FF6C5C;
 }
 
-#img{
+#img:hover{
+	transition: 0.3s;
 	cursor: pointer;
+	
+	opacity: 0.5;
 }
 
 .predActive{
 	/*background-color: #FF8C7C;*/
 	/*background-color: #FF8C7C;*/
-	background-color: #9A8B8B;
+	/*background-color: #9A8B8B;*/
+	background-color: #4C5A69;
 }
 
 .predActive #predName{
 	color: white;
 	font-weight: bold;
-}
-			
-#predPanel{
-	/*display: block;*/
-	/*padding: 0.5%;*/
 }
 
 #p0 > img, #p1 > img, #p2 > img, #p3 > img, #p4 > img {
