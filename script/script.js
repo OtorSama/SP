@@ -4,6 +4,8 @@ $(document).ready(function() {
 	$(document).on("click","#predictButton", doPrediction);
 	$(document).on("click",".predicted",viewDescription);
 	$(document).on("click", ".predicted", selectBreed);
+
+	// $(document).on("click", "#predictButton", drawDiv);
 });
 
 function browseImg(){
@@ -50,6 +52,12 @@ function browseImg(){
 function selectBreed(){
 	$(".predActive").removeClass("predActive");
 	$(this).toggleClass("prediction predActive");
+}
+
+function drawDiv(){
+	$("#panel2").removeClass("activePanel1");
+	$("#panel2").toggleClass("activePanel2");
+	// $("#predPanel").toggleClass("activePanel");
 }
 
 function adjustWidth(){
