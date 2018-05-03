@@ -47,7 +47,7 @@
 					</div>
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					<button id="predictButton" class="btn btn-default" type="button" style="height: 7vw;">Predict</button>
+					<button id="predictButton" class="btn btn-default" type="button" style="height: 100px;">Predict</button>
 				</div>
 			</div>
 		</div>

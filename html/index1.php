@@ -22,7 +22,7 @@
 			
 		<div class="row">
 			<div class="container-fluid">
-				<div id="panel1" class="panel panel-default col-xs-4 col-xs-offset-2 col-sm-4 col-sm-offset-2 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2">
+				<div id="panel1" class="panel panel-default col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
 					<div id="imagePanel" class="panel-body">
 						<div id="imgHolder" style="display: block; overflow: hidden;">
 							<img id="img" name="img" src="<?php echo $imgName ?>" />
@@ -34,7 +34,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="panel2" class="panel panel-default col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<div id="panel2" class="panel panel-default col-xs-5 col-sm-5 col-md-5 col-lg-5">
 					<div id="predPanel" class="panel-body">
 						<div id="predCont">
 							<!-- <p><center>For predictions</center></p> -->
@@ -47,13 +47,13 @@
 					</div>
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-					<button id="predictButton" class="btn btn-default" type="button" style="height: 7vw;">Predict</button>
+					<button id="predictButton" class="btn btn-default" type="button" style="height: 100px;">Predict</button>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="container-fluid">
-				<div id="panel3" class="panel panel-default col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+				<div id="panel3" class="panel panel-default col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
 					<div id="descPanel" class="panel-body">
 						<span id="description" name="description"></span>
 					</div>

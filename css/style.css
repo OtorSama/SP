@@ -1,12 +1,14 @@
 #panel1{
-	margin-right: 0.3vw;
+	transition: 1s ease;
+	margin-right: 0.5vw;
 }
 
 #imagePanel{
 	/*border: 1px solid #e7e7e7;*/
 	/*border: 1px solid #815C4D;*/
 	width: auto;
-	height: 30vw;
+	/*height: 25vw;*/
+	height: 25vw;
 	/*margin-right: 0.15vw;*/
 
 	/*border: 1px solid red;*/
@@ -15,53 +17,107 @@
 	justify-content: center;
 }
 
-/*.activePanel1{
-	width: 10vw;
-	transition: 0.3s ease;
+#panel1:hover #img{
+	transition: 1s ease;
+	/*height: 24vw;*/
+	opacity: 0.5;
 }
 
-.activePanel2{
+#panel1:hover{
+	transition: 1s ease;
 	width: 40vw;
-	transition: 0.5s ease;
-}*/
-
-/*#panel2:active{
-	width: 40vw;
-}*/
-
-#predPanel{
-	/*border: 1px solid #e7e7e7;*/
-	/*border: 1px solid #815C4D;*/
-	width: auto;
-	/*width: 10vw;*/
-	height: 30vw;
-
-	padding-top: 0;
 }
 
-#descPanel{
-	/*border: 1px solid #e7e7e7;*/
-	/*border: 1px solid #815C4D;*/
-	width: auto;
-	margin-left: 0.075vw;
-
-	margin-top: 1vw;
-	height: 15vh;
-	overflow-y: auto;
-	}
-
-#upload-actions  input[type="file"]{
-	position: absolute;
-	display: none;
+#panel1:hover + #panel2{
+	transition: 1s ease;
+	width: 26.6555vw;
+	/*border: 1px solid red;*/
 }
+
+/*#p0 #predName{
+	color: red;
+}*/
+/*#panel1:hover + #predName{
+	transition: 1s ease;
+	font-size: 1vw;
+	color: red;
+}*/
 
 #img {
+	transition: 1s ease;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	
 	width: auto;
-	height: 29vw;
+	/*height: 29vw;*/
+	height: 24vw;
+	/*height: 23.5vw;*/
+}
+
+#img:hover{
+	transition: 1s ease;
+	/*height: 24vw;*/
+}
+
+#panel2{
+	transition: 1s ease;
+}
+
+#predPanel{
+	transition: 1s ease;
+	/*border: 1px solid #e7e7e7;*/
+	/*border: 1px solid #815C4D;*/
+	width: auto;
+	/*width: 10vw;*/
+	/*height: 30vw;*/
+	height: 25vw;
+
+	padding-top: 0;
+}
+
+#panel3{
+	transition: 2s ease;
+	display: block;
+	/*height: 13vw;*/
+	height: 1vw;
+	margin-top: -1vw;
+	/*margin-left: 0.5vw;*/
+	align-items: center;
+	justify-content: center;
+
+	overflow: hidden;
+}
+
+/*.panel3Expand{
+	transition: 1s ease;
+}*/
+
+#descPanel{
+	/*border: 1px solid #e7e7e7;*/
+	/*border: 1px solid #815C4D;*/
+	/*margin-left: 0.075vw;*/
+
+	margin-top: 1vw;
+	width: auto;
+	height: 11vw;
+	overflow-y: auto;
+
+	text-align: justify;
+	align-items: center;
+	justify-content: center;
+	}
+
+#description{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#upload-actions  input[type="file"]{
+	position: absolute;
+	display: none;
 }
 
 .btn{
@@ -86,9 +142,10 @@
 }
 
 #predName{
+	transition: 1s ease;
 	color: #6C7A89;
 	/*font-size: 120%;*/
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 	font-weight: bold;
 	text-align: left;
 	width: 80%;
@@ -96,68 +153,43 @@
 	padding-left: 5%;
 }
 
-#panel3{
-	margin-top: -1vw;
-	height: 18.4vh;
-}
-
-#descPanel{
-	text-align: justify;
-	align-items: center;
-	justify-content: center;
-}
-
-#description{
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 #p0:hover #predName, #p1:hover #predName, #p2:hover #predName, #p3:hover #predName, #p4:hover #predName{
-	color: white;
+	color: #ff1744;
+	/*font-size: 1.35vw;*/
 }
 
 #predCont{
+	/*transition: 1s ease;*/
 	display: block;
 	margin-top: 0.4vw;
 }
 
+.predicted{
+	transition: 1.3s ease;
+}
+
 .predicted:hover {
-	transition: 0.3s ease;
+	transition: 1s ease;
 	color: white;
 	/*background-color: #FFCCBC;*/
 	/*background-color: #C4B1B1;*/
-	background-color: #C5D3E2;
+	/*background-color: #C5D3E2;*/
+	background-color: #CFD8DC;
 	cursor: pointer;
-	margin-left: -1vw;
-	border-right: 2vw solid #FF6C5C;
+	margin-left: -5vw;
+	border-right: 2vw solid #ff1744;
 }
-
-/*.predicted:after{
-	position: absolute;
-	content: '';
-	top: 0; left: 0; bottom: 0; right: 0;
-	background-color: gray;
-
-	height: 5.8vw;
-	transform: scaleX(0);
-	transform-origin: right 50%;
-	transition: transform .3s ease-out;
-}
-
-.predicted:hover:after{
-	transform: scaleX(0.5);
-}*/
 
 #img:hover{
-	transition: 0.3s;
+	/*transition: 1s ease;*/
+	transition: 0.4s ease;
 	cursor: pointer;
 	
-	opacity: 0.5;
+	/*opacity: 0.5;*/
 }
 
 .predActive{
+	/*transition: 0.3s ease;*/
 	/*background-color: #FF8C7C;*/
 	/*background-color: #FF8C7C;*/
 	/*background-color: #9A8B8B;*/
@@ -165,11 +197,18 @@
 }
 
 .predActive #predName{
+	/*transition: 0.3s ease;*/
 	color: white;
 	font-weight: bold;
 }
 
 #p0 > img, #p1 > img, #p2 > img, #p3 > img, #p4 > img {
-	height: 5.8vw;
-	width: 5.8vw;
+	height: 4.8vw;
+	width: 4.8vw;
 }
+
+/*#predictButton{
+	position: absolute;
+	top: 0;
+	left: 40%;
+}*/
