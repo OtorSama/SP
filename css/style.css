@@ -1,6 +1,8 @@
 #panel1{
 	transition: 1s ease;
 	margin-right: 0.5vw;
+	cursor: pointer;
+	
 }
 
 #imagePanel{
