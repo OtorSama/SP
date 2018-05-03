@@ -53,7 +53,8 @@ function selectBreed(){
 }
 
 function doPrediction(){
-	// console.log("test");
+	var imageSource = $("#img").attr("src");
+	console.log(imageSource);
 	var image_file = "dogImage.jpg";
 	$.ajax({
 		url: "prediction.php?image_file="+image_file,

@@ -1,5 +1,5 @@
 import random
-
+import sys
 predictions = []
 N = 5
 
