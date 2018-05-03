@@ -1,16 +1,15 @@
 <?php
 	require("config.php");
 
-	//$image_file = $_GET['image_file'];
-	$image_file = "Chihuahua.jpg";
-	//$output = exec("/usr/bin/python ../bin/predictBreed.py"); 
+	$image_file = $_GET['image_file'];
+	//$image_file = "placeholder.png";
+	//$content = exec("/usr/bin/python ../bin/predictBreed.py"); 
 	
-	//$image_path = "/opt/lampp/htdocs/SP/images/temp".$image_file;
-	//$deploy_path = "/home/user/Downloads/code/sp/deployPredict.py";
-	$content = exec("/usr/bin/python ../../../../../home/user/Downloads/code/sp/deployPredict.py /opt/lampp/htdocs/SP/images/temp/Chihuahua.jpg");
-	
-	$predictions = explode(" ",$content);
+	$image_path = "/opt/lampp/htdocs/SP/images/temp/".$image_file;
+	$deploy_path = "../../../../../home/user/Downloads/code/sp/deployPredict.py";
+	$content = exec("/usr/bin/python ".$deploy_path." ".$image_path);
 
+	$predictions = explode(" ",$content);
 	$data = [];
 
 	foreach($predictions as $pred){

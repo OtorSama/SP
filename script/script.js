@@ -73,9 +73,9 @@ function adjustWidth(){
 }
 
 function doPrediction(){
-	var imageSource = $("#img").attr("src");
-	console.log(imageSource);
-	var image_file = "dogImage.jpg";
+	var imageSource = $("#img").attr("src").split("/");
+	var image_file = imageSource[imageSource.length-1];
+	
 	$.ajax({
 		url: "prediction.php?image_file="+image_file,
 		type: "get",
