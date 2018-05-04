@@ -62,12 +62,14 @@ function browseImg(){
 					path = ("" + data);
 					$('#img').attr('src', path);
 					fd = new FormData();
+					doPrediction();	
 				}
 			});
 		});
 		
 		$('#imgForm').submit();
-		doPrediction();
+		//alert("before predict");	
+	//	doPrediction();
 		retractPan3();
 		}
 	}		
@@ -149,11 +151,22 @@ function doPrediction(){
 			// $("div[name=description]").html(returnData[0]["breed_description"]);
 			$("span[name=description]").html(returnData[0]["breed_description"]);
 			$("div[name=breedname]").html(returnData[0]["breed_name"]);
-
+			$("#predCont").show();
 			expandPan3();
 		},
 		error: function(){
-			alert("Please Try Again.");
+		//	alert("Please Try Again.");
+		//	$("#predCont").hide();
+		/*	
+			var tmp;
+       			 for(var i=0; i < 5; i++){
+                		tmp = ("#p" + i + "");
+                		//$(tmp + " " + "#predName").css("font-size", "1.3vw");
+                		//$(tmp + " " + "#predName").css("width", "82%");
+        			$(tmp + " " + "#predName").css( 	
+			
+			}
+		*/	
 		}
 	});
 }
