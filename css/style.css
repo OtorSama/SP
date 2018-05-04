@@ -2,7 +2,7 @@
 	transition: 1s ease;
 	margin-right: 0.5vw;
 	cursor: pointer;
-	
+
 }
 
 #imagePanel{
@@ -148,15 +148,20 @@
 	color: #6C7A89;
 	/*font-size: 120%;*/
 	font-size: 1.3vw;
+	/*font-size: 1vw;*/
 	font-weight: bold;
 	text-align: left;
 	width: 80%;
+	/*width: 74%;*/
 	display: inline-block;
 	padding-left: 5%;
+
+	overflow: hidden;
 }
 
 #p0:hover #predName, #p1:hover #predName, #p2:hover #predName, #p3:hover #predName, #p4:hover #predName{
 	color: #ff1744;
+	overflow: hidden;
 	/*font-size: 1.35vw;*/
 }
 
@@ -209,8 +214,6 @@
 	width: 4.8vw;
 }
 
-/*#predictButton{
-	position: absolute;
-	top: 0;
-	left: 40%;
-}*/
+#predictButton{
+	display: none;
+}

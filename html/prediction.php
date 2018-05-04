@@ -4,7 +4,11 @@
 	$image_file = $_GET['image_file'];
 	// $image_file = "placeholder.png";
 	// $content = exec("/usr/bin/python ../bin/predictBreed.py");
+<<<<<<< HEAD
 	//$content = exec("python ../bin/predictBreed.py");
+=======
+	// $content = exec("python ../bin/predictBreed.py");
+>>>>>>> 21974a61220bdbc55e913317ed31b0a84a9849a1
 
 	$image_path = "/opt/lampp/htdocs/SP/images/temp/".$image_file;
 	$deploy_path = "../../../../../home/user/Downloads/code/sp/deployPredict.py";

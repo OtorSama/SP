@@ -1,40 +1,33 @@
 // window.onload = function(){}
 $(document).ready(function() {
-	$(document).on("click", "#img", browseImg);
+	// $(document).on("click", "#img", browseImg);
 	$(document).on("click", "#panel1", browseImg);
-	$(document).on("click","#predictButton", doPrediction);
+	// $(document).on("click","#predictButton", doPrediction);
 	$(document).on("click",".predicted",viewDescription);
 	$(document).on("click", ".predicted", selectBreed);
+	$("#panel1").bind("mouseover", slideRight);
+	$("#panel1").bind("mouseout", slideLeft);
 	$(window).bind("resize", adjustWidth);
 	adjustWidth();
 
 
-	$(document).on("mouseover", "#panel1", function(){
-		var tmp;
-		for(var i=0; i < 5; i++){
-			tmp = ("#p" + i + "");
-			// $(tmp + " " + "#predName").fadeOut();
-			// $(tmp + " " + "#predName").hide(300);
-			$(tmp + " " + "#predName").css("font-size", "1vw");
-			// $(tmp + " " + "#predName").css("text-align", "center");
-			// $(tmp + " " + "#predName").css("border", "1px solid red");
-			$(tmp + " " + "#predName").css("width", "74%");
+// 	$(document).on("mouseover", "#panel1", function(){
+// 		var tmp;
+// 		for(var i=0; i < 5; i++){
+// 			tmp = ("#p" + i + "");
+// 			$(tmp + " " + "#predName").css("font-size", "1vw");
+// 			$(tmp + " " + "#predName").css("width", "74%");
+// 		}
+// 	});
 
-		}
-	});
-
-	$(document).on("mouseout", "#panel1", function(){
-		var tmp;
-		for(var i=0; i < 5; i++){
-			tmp = ("#p" + i + "");
-			// $(tmp + " " + "#predName").css("transition", "display 1s ease");
-			$(tmp + " " + "#predName").css("font-size", "1.3vw");
-			$(tmp + " " + "#predName").css("width", "82%");
-
-			// $(tmp + " " + "#predName").css("display", "inline");
-			// $(tmp + " " + "#predName").show(300);
-		}
-	});
+// 	$(document).on("mouseout", "#panel1", function(){
+// 		var tmp;
+// 		for(var i=0; i < 5; i++){
+// 			tmp = ("#p" + i + "");
+// 			$(tmp + " " + "#predName").css("font-size", "1.3vw");
+// 			$(tmp + " " + "#predName").css("width", "82%");
+// 		}
+// 	});
 });
 
 function browseImg(){
@@ -74,6 +67,7 @@ function browseImg(){
 		});
 		
 		$('#imgForm').submit();
+		doPrediction();
 		retractPan3();
 		}
 	}		
@@ -85,20 +79,6 @@ function selectBreed(){
 }
 
 function adjustWidth(){
-	// var bodyWidth = $('body').width();
-	// var bodyWidth = $(window).width();
-	// oneVW = (0.003)*(bodyWidth);
-	// total = (0.6432210445404053125)*(bodyWidth);
-	// alert(total);
-	
-	// var tmp1 = $('#panel1').css('margin-right');
-	// tmp1 = tmp1.slice(0, tmp1.length-2);
-	// alert(tmp1);
-
-	// var tmp = parseFloat(total) + parseFloat(tmp1);
-	// // alert(tmp);
-	// $("#panel3").width(tmp);
-
 	var pan1 = $("#panel1").css('width');
 	pan1 = pan1.slice(0, pan1.length-2);
 	// alert(pan1);
@@ -111,6 +91,24 @@ function adjustWidth(){
 
 	var tmp = parseFloat(pan1) + parseFloat(pan2) + parseFloat(mar1);
 	$("#panel3").width(tmp-30);
+}
+
+function slideRight(){
+	var tmp;
+	for(var i=0; i < 5; i++){
+		tmp = ("#p" + i + "");
+		$(tmp + " " + "#predName").css("font-size", "1vw");
+		$(tmp + " " + "#predName").css("width", "74%");
+	}
+}
+
+function slideLeft(){
+	var tmp;
+	for(var i=0; i < 5; i++){
+		tmp = ("#p" + i + "");
+		$(tmp + " " + "#predName").css("font-size", "1.3vw");
+		$(tmp + " " + "#predName").css("width", "82%");
+	}
 }
 
 function expandPan3(){
