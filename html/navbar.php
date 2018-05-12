@@ -7,6 +7,13 @@
 
 			<a class="navbar-brand" href="#">Image Classifier</a>
 		</div>
+	
+		<div class="nav navbar-right">	
+			<ul class="nav navbar-nav">
+				<li><a href="index.php">Home</a></li>
+				<li><a href="breeds.php">Breeds</a></li>
+			</ul>
+		</div>	
 		<!-- <div class="collapse navbar-collapse" id="app-navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">

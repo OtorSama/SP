@@ -159,6 +159,7 @@
 	overflow: hidden;
 }
 
+
 #p0:hover #predName, #p1:hover #predName, #p2:hover #predName, #p3:hover #predName, #p4:hover #predName{
 	color: #ff1744;
 	overflow: hidden;
@@ -166,7 +167,6 @@
 }
 
 #predCont{
-	/*transition: 1s ease;*/
 	display: block;
 	margin-top: 0.4vw;
 }
@@ -210,6 +210,11 @@
 }
 
 #p0 > img, #p1 > img, #p2 > img, #p3 > img, #p4 > img {
+	height: 4.8vw;
+	width: 4.8vw;
+}
+
+.breedList > img{
 	height: 4.8vw;
 	width: 4.8vw;
 }

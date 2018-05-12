@@ -62,6 +62,7 @@ function browseImg(){
 					path = ("" + data);
 					$('#img').attr('src', path);
 					fd = new FormData();
+					$('#predCont').hide();	
 					doPrediction();	
 				}
 			});
@@ -151,6 +152,7 @@ function doPrediction(){
 			// $("div[name=description]").html(returnData[0]["breed_description"]);
 			$("span[name=description]").html(returnData[0]["breed_description"]);
 			$("div[name=breedname]").html(returnData[0]["breed_name"]);
+			$("#predCont").css("opacity", "1.0");
 			$("#predCont").show();
 			expandPan3();
 		},
