@@ -134,6 +134,7 @@ function doPrediction(){
 		type: "get",
 		dataType: "JSON",
 		success: function( returnData ){
+			$("#instructions").hide()	
 			var imagePath = "../images/dog_breeds/";
 
 			for(var i = 0; i < 5; i++) {

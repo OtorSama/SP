@@ -44,6 +44,16 @@
 							<div id="p3" class="predicted"></div>
 							<div id="p4" class="predicted"></div>
 						</div>
+						<div id="instructions">
+							<p><strong>Instructions</strong></p>
+							<ol>
+								<li>Click the empty photo in the left.</li>
+								<li>Select a photo of a dog to predict.</li>
+								<li>Click upload.</li>
+								<li>Wait for the result.</li>
+								<li>To predict another dog, just click again on the left photo.</li>
+							</ol>
+						</div>	
 					</div>
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">

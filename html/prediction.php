@@ -9,7 +9,7 @@
 	$image_path = "/opt/lampp/htdocs/SP/images/temp/".$image_file;
 	$deploy_path = "../../../../../home/user/Downloads/code/sp/deployPredict.py";
 	$content = exec("/usr/bin/python ".$deploy_path." ".$image_path);
-       //var_dump($content);
+        //var_dump($content);
 	$predictions = explode(" ",$content);
 	$data = [];
 
@@ -31,6 +31,6 @@
 	}
 	echo "</table>";
 	*/
-       //var_dump($data);
+        //var_dump($data);
 	echo json_encode($data);
 ?>
