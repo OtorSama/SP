@@ -141,21 +141,24 @@ function doPrediction(){
 			var imagePath = "../images/dog_breeds/";
 
 			for(var i = 0; i < 5; i++) {
-				var image = imagePath + returnData[i]["breed_image"];
-				var name = returnData[i]["breed_name"];
+				var image = imagePath + returnData[i][0]["breed_image"];
+				var name = returnData[i][0]["breed_name"];
+				var score = (parseFloat(returnData[i][1])*100).toFixed(2);
 
 				// $("#p"+i+"").html("<image src='"+image+ "'>" + name);
-				$("#p"+i+"").html("<img id='imgbreed' src='"+image+ "' />" + "<span id='predName'>" + name + "</span>");
+				$("#p"+i+"").html("<img id='imgbreed' src='"+image+ "' />" + "<span id='predName'>" + name + "</span >"+"<span id = 'predScore'>"+score+"%</span>");
 				if(i == 0){
 					$(".predActive").removeClass("predActive");
 					$("#p"+i+"").addClass("predActive");
 				}
-				$("#p"+i+"").attr("data-id", ""+returnData[i]["breed_id"]);
+				$("#p"+i+"").attr("data-id", ""+returnData[i][0]["breed_id"]);
+
+				console.log(returnData[i][1]);
 			}
 
 			// $("div[name=description]").html(returnData[0]["breed_description"]);
-			$("span[name=description]").html(returnData[0]["breed_description"]);
-			$("div[name=breedname]").html(returnData[0]["breed_name"]);
+			$("span[name=description]").html(returnData[0][0]["breed_description"]);
+			$("div[name=breedname]").html(returnData[0][0]["breed_name"]);
 			$("#predCont").css("opacity", "1.0");
 			$('#loadPanel').hide();
 			$("#predCont").show();
