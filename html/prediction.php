@@ -4,7 +4,7 @@
 	$image_file = $_GET['image_file'];
 	// $image_file = "placeholder.png";
 	// $content = exec("/usr/bin/python ../bin/predictBreed.py");
-	//$content = exec("python ../bin/predictBreed.py");
+	// $content = exec("python ../bin/predictBreed.py");
 
 	$image_path = "/opt/lampp/htdocs/SP/images/temp/".$image_file;
 	$deploy_path = "../../../../../home/user/Downloads/code/sp/deployPredict.py";

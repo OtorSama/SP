@@ -1,5 +1,6 @@
 // window.onload = function(){}
 $(document).ready(function() {
+	$("#loadPanel").hide();
 	// $(document).on("click", "#img", browseImg);
 	$(document).on("click", "#panel1", browseImg);
 	// $(document).on("click","#predictButton", doPrediction);
@@ -62,7 +63,9 @@ function browseImg(){
 					path = ("" + data);
 					$('#img').attr('src', path);
 					fd = new FormData();
-					$('#predCont').hide();	
+					$('#predCont').hide();
+					$('#predCont-inst').hide();
+					$('#loadPanel').show();
 					doPrediction();	
 				}
 			});
@@ -154,6 +157,7 @@ function doPrediction(){
 			$("span[name=description]").html(returnData[0]["breed_description"]);
 			$("div[name=breedname]").html(returnData[0]["breed_name"]);
 			$("#predCont").css("opacity", "1.0");
+			$('#loadPanel').hide();
 			$("#predCont").show();
 			expandPan3();
 		},

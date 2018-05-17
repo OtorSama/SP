@@ -2,6 +2,8 @@ body{
 	background-color: #E8E8E8;
 	overflow: auto;
 	overflow-x: hidden;
+
+	font-family: 'Open Sans';
 }
 
 .navbar, .panel{
@@ -15,4 +17,83 @@ body{
 
 .navbar-brand{
 	color: #BF360C;
+}
+
+#logo{
+	display: block;
+	/*border: 1px solid blue;*/
+
+	width: 100%;
+}
+
+#logo img{
+	height: 10vw;
+	width: auto;
+}
+
+#logo > div{
+	display: flex;
+	justify-content: center;
+}
+
+#instructions{
+	/*border: 1px solid red;*/
+
+	margin-top: 2vw;
+}
+
+#loadPanel{
+	transition: 1s ease;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 24vw;
+}
+
+#loader{
+	transition: 1s ease;
+
+	border: 1vw solid #f3f3f3;
+	border-radius: 50%;
+	/*border-top: 1vw solid #448AFF;*/
+	border-top: 1vw solid #BFB7A5;
+
+	width: 5vw;
+	height: 5vw;
+	
+	-webkit-animation: spin 1s linear infinite;
+	animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin{
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+#pagination-var{
+	border: 1px solid transparent;
+}
+
+#pagination-var .active{
+	font-weight: bold;
+	background-color: #7F6E48;
+}
+
+#pagination-var a{
+	/*font-weight: bold;*/
+	color: #BCAAA4;
+	border-color: #BFB7A5;
+}
+
+#pagination-var .active > a{
+	background-color: #BFB7A5;
+	color: white;
+	/*border: 1px solid transparent;*/
+	border-color: transparent;
+}
+
+hr{
+	border-color: #BFB7A5;
 }

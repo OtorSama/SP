@@ -44,16 +44,34 @@
 							<div id="p3" class="predicted"></div>
 							<div id="p4" class="predicted"></div>
 						</div>
-						<div id="instructions">
-							<p><strong>Instructions</strong></p>
-							<ol>
-								<li>Click the empty photo in the left.</li>
-								<li>Select a photo of a dog to predict.</li>
-								<li>Click upload.</li>
-								<li>Wait for the result.</li>
-								<li>To predict another dog, just click again on the left photo.</li>
-							</ol>
-						</div>	
+
+						<div id="predCont-inst">
+							<div id="logo">
+								<div class="container-fluid">
+									<img src="../images/doggo_tmp1.png">
+								</div>
+								<div id="inst-header">
+									<span><strong>INSTRUCTIONS</strong></span>
+								</div>
+								<div id="inst-cont" style="text-align: center;">
+									<span>To get started, upload an image <br /> of a dog by clicking on the left panel<br /> and wait for the results.<br /><br />
+									To try again, just repeat the process.</span>
+								</div>
+								
+							</div>
+							<!-- <p><strong>Instructions</strong></p>
+									<ol>
+										<li>Click the empty photo in the left.</li>
+										<li>Select a photo of a dog to predict.</li>
+										<li>Click upload.</li>
+										<li>Wait for the result.</li>
+										<li>To predict another dog, just click again on the left photo.</li>
+									</ol> -->
+						</div>
+
+						<div id="loadPanel">
+							<div id="loader"></div>
+						</div>
 					</div>
 				</div>
 				<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
