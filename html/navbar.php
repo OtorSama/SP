@@ -5,7 +5,7 @@
 				<span class="glyphicon glyphicon-menu-hamburger"></span>
 			</button>
 
-			<a class="navbar-brand" href="#">Image Classifier</a>
+			<a class="navbar-brand" href="index.php">Dog Breed Classifier</a>
 		</div>
 	
 		<div class="nav navbar-right">	
