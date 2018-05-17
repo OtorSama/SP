@@ -11,7 +11,7 @@
 		<div class="nav navbar-right">	
 			<ul class="nav navbar-nav">
 				<li><a href="index.php">Home</a></li>
-				<li><a href="breeds.php">Breeds</a></li>
+				<li><a href="breeds.php?page=1">Breeds</a></li>
 			</ul>
 		</div>	
 		<!-- <div class="collapse navbar-collapse" id="app-navbar-collapse">
