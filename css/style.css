@@ -149,11 +149,11 @@
 	transition: 1s ease;
 	color: #6C7A89;
 	/*font-size: 120%;*/
-	font-size: 1.3vw;
+	font-size: 1.2vw;
 	/*font-size: 1vw;*/
 	font-weight: bold;
 	text-align: left;
-	width: 80%;
+	/*width: 80%;*/
 	/*width: 74%;*/
 	display: inline-block;
 	padding-left: 5%;
@@ -163,6 +163,13 @@
 
 
 #p0:hover #predName, #p1:hover #predName, #p2:hover #predName, #p3:hover #predName, #p4:hover #predName{
+	/*color: #ff1744;*/
+	color: #7F6E48;
+	overflow: hidden;
+	/*font-size: 1.35vw;*/
+}
+
+#p0:hover #predScore, #p1:hover #predScore, #p2:hover #predScore, #p3:hover #predScore, #p4:hover #predScore{
 	/*color: #ff1744;*/
 	color: #7F6E48;
 	overflow: hidden;
@@ -254,13 +261,21 @@
 	background-color: #BFB7A5;
 }
 
-.predActive #predName{
+.predActive #predName, .predActive #predScore{
 	/*transition: 0.3s ease;*/
 	color: white;
 	font-weight: bold;
 }
 
-#p0 > img, #p1 > img, #p2 > img, #p3 > img, #p4 > img {
+#labelDiv{
+	width: 85%;
+	overflow: hidden;
+	padding-top: 2%;
+}
+
+#p0, #p1, #p2, #p3, #p4 { display: flex; }
+
+#p0 > div > img, #p1 > div > img, #p2 > div > img, #p3 > div > img, #p4 > div > img {
 	height: 4.8vw;
 	width: 4.8vw;
 }

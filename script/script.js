@@ -112,7 +112,7 @@ function slideLeft(){
 	var tmp;
 	for(var i=0; i < 5; i++){
 		tmp = ("#p" + i + "");
-		$(tmp + " " + "#predName").css("font-size", "1.3vw");
+		$(tmp + " " + "#predName").css("font-size", "1.1vw");
 		$(tmp + " " + "#predName").css("width", "82%");
 	}
 }
@@ -146,7 +146,7 @@ function doPrediction(){
 				var score = (parseFloat(returnData[i][1])*100).toFixed(2);
 
 				// $("#p"+i+"").html("<image src='"+image+ "'>" + name);
-				$("#p"+i+"").html("<img id='imgbreed' src='"+image+ "' />" + "<span id='predName'>" + name + "</span >"+"<span id = 'predScore'>"+score+"%</span>");
+				$("#p"+i+"").html("<div><img id='imgbreed' src='"+image+ "' /></div>" + "<div id='labelDiv'><span id='predName'>" + name + "</span >"+"<span id='predScore'>"+score+"%</span></div>");
 				if(i == 0){
 					$(".predActive").removeClass("predActive");
 					$("#p"+i+"").addClass("predActive");

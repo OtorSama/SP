@@ -94,6 +94,13 @@ body{
 	border-color: transparent;
 }
 
+#predScore{
+	display: block;
+	width: 75%;
+	padding-left: 5%;
+	font-size: 1vw;
+}
+
 hr{
 	border-color: #BFB7A5;
 }
